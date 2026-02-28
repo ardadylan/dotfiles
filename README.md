@@ -1,22 +1,17 @@
-### 1. Install Kanata
-```bash
-yay -S kanata-bin
+# Dotfiles
 
-2. Clone Repository
-Bash
+## ⌨️ Kanata (Keyboard)
+1. **Install:** `yay -S kanata-bin`
+2. **Link Config:** ```bash
+   mkdir -p ~/.config/kanata
+   ln -s ~/dotfiles/kanata-files/kanata.kbd ~/.config/kanata/kanata.kbd
 
-mkdir -p ~/.config/kanata
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git) ~/.config/kanata
+    Setup Service:
+    Bash
 
-3. Setup and Start Service
-Bash
+    mkdir -p ~/.config/systemd/user/
+    cp ~/dotfiles/kanata-files/kanata.service ~/.config/systemd/user/
+    systemctl --user daemon-reload
+    systemctl --user enable --now kanata
 
-mkdir -p ~/.config/systemd/user/
-cp ~/.config/kanata/kanata.service ~/.config/systemd/user/
-systemctl --user daemon-reload
-systemctl --user enable --now kanata
-
-4. Verify Status
-Bash
-
-systemctl --user status kanata
+🐚 Shell (Coming Soon)
