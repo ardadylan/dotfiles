@@ -3,7 +3,7 @@
 )
 
 (defsrc
-  f13 a s d f j k l scln
+  caps a s d f j k l scln
 )
 
 (defalias
